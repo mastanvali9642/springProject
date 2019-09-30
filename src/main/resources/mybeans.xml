@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="employee" class="com.mastan.beans.Employee">
+<property name="id" value="101"></property>
+<property name="name" value="Mastan"></property>
+<property name="address" value="parchur"></property>
+</bean>
+<bean id="addr" class="com.mastan.beans.Address">
+<property name="line1" value="massedBazar"></property>
+<property name="line2" value="shsh"></property>
+</bean>
+<bean id="user" class="com.mastan.beans.User">
+<constructor-arg name="id" value="101"></constructor-arg>
+<constructor-arg name="name" value="Mastan"></constructor-arg>
+</bean>
+<bean id="student" class="com.mastan.beans.Student" autowire="byName">
+<property name="id" value="10"></property>
+<property name="name" value="mastan"></property>
+
+</bean>
+<bean id="details" class="com.mastan.beans.Student_Details">
+<property name="total_marks" value="520"></property>
+<property name="sub1" value="120"></property>
+<property name="sub2" value="420"></property>
+</bean>
+
+  </beans>
